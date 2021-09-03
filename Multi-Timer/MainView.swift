@@ -27,7 +27,7 @@ class MainView: UIView {
     required public init?(coder aDecoder: NSCoder) {
         return nil
     }
-    
+
     private func setupProjectTitle() {
         addSubview(projectTitle)
         projectTitle.translatesAutoresizingMaskIntoConstraints = false
@@ -35,13 +35,13 @@ class MainView: UIView {
         projectTitle.textColor = .white
         projectTitle.textAlignment = .left
         projectTitle.font = UIFont(name: "Roboto-Black", size: 50)
-        projectTitle.layer.shadowColor = UIColor.darkGray.cgColor
-        projectTitle.layer.shadowOpacity = 1
+        projectTitle.layer.shadowColor = UIColor.black.cgColor
+        projectTitle.layer.shadowOpacity = 0.2
         projectTitle.layer.shadowOffset = .zero
-        projectTitle.layer.shadowRadius = 20
+        projectTitle.layer.shadowRadius = 100
  
         NSLayoutConstraint.activate([
-            projectTitle.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: 60),
+            projectTitle.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: 30),
             projectTitle.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 30)
         ])
     }
@@ -49,13 +49,13 @@ class MainView: UIView {
     private func setupAddingTimerLabel() {
         addSubview(addingTimerLabel)
         addingTimerLabel.translatesAutoresizingMaskIntoConstraints = false
-        addingTimerLabel.text = "Adding Timer"
+        addingTimerLabel.text = "Adding a Timer"
         addingTimerLabel.textColor = .white
         addingTimerLabel.font = UIFont(name: "Roboto-Light", size: 25)
         
         NSLayoutConstraint.activate([
             addingTimerLabel.leadingAnchor.constraint(equalTo: projectTitle.leadingAnchor),
-            addingTimerLabel.topAnchor.constraint(equalTo: projectTitle.bottomAnchor, constant: 45)
+            addingTimerLabel.topAnchor.constraint(equalTo: projectTitle.bottomAnchor, constant: 35)
         ])
     }
     
@@ -66,8 +66,9 @@ class MainView: UIView {
         
         NSLayoutConstraint.activate([
             line.topAnchor.constraint(equalTo: addingTimerLabel.bottomAnchor, constant: 8),
-            line.widthAnchor.constraint(equalToConstant: frame.width),
-            line.heightAnchor.constraint(equalToConstant: 4)
+            line.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 0),
+            line.trailingAnchor.constraint(equalTo: trailingAnchor, constant: 0),
+            line.heightAnchor.constraint(equalToConstant: 2)
         ])
     }
  
@@ -77,19 +78,20 @@ class MainView: UIView {
         nameTextField.textColor = .darkGray
         nameTextField.backgroundColor = .white
         nameTextField.layer.cornerRadius = 10
-        nameTextField.layer.borderWidth = 4
-        let borderColor = UIColor(red: 230/255, green: 37/255, blue: 130/255, alpha: 1).cgColor
+        
+        nameTextField.layer.borderWidth = 3
+        let borderColor = UIColor.borderColor
         nameTextField.layer.borderColor = borderColor
-        nameTextField.font = UIFont(name: "Roboto-Light", size: 18)
+        nameTextField.font = UIFont(name: "Roboto-Regular", size: 18)
         nameTextField.attributedPlaceholder = NSAttributedString(string: "Timer Name", attributes: [NSAttributedString.Key.foregroundColor: UIColor.gray, NSAttributedString.Key.font: UIFont(name: "Roboto-Light", size: 18) ?? UIFont.systemFont(ofSize: 18)])
         let leftView = UIView(frame: CGRect(x: 0.0, y: 0.0, width: 15.0, height: 0.0))
         nameTextField.leftView = leftView
         nameTextField.leftViewMode = .always
        
         NSLayoutConstraint.activate([
-            nameTextField.leadingAnchor.constraint(equalTo: addingTimerLabel.leadingAnchor),
+            nameTextField.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 20),
             nameTextField.topAnchor.constraint(equalTo: line.bottomAnchor, constant: 30),
-            nameTextField.widthAnchor.constraint(equalToConstant: frame.width * 0.7),
+            trailingAnchor.constraint(equalTo: nameTextField.trailingAnchor, constant: 20),
             nameTextField.heightAnchor.constraint(equalToConstant: 60)
         ])
     }
@@ -100,19 +102,19 @@ class MainView: UIView {
         durationTextField.textColor = .darkGray
         durationTextField.backgroundColor = .white
         durationTextField.layer.cornerRadius = 10
-        durationTextField.layer.borderWidth = 4
-        let borderColor = UIColor(red: 230/255, green: 37/255, blue: 130/255, alpha: 1).cgColor
+        durationTextField.layer.borderWidth = 3
+        let borderColor = UIColor.borderColor
         durationTextField.layer.borderColor = borderColor
-        durationTextField.font = UIFont(name: "Roboto-Light", size: 18)
+        durationTextField.font = UIFont(name: "Roboto-Regular", size: 18)
         durationTextField.attributedPlaceholder = NSAttributedString(string: "Time in Seconds", attributes: [NSAttributedString.Key.foregroundColor: UIColor.gray, NSAttributedString.Key.font: UIFont(name: "Roboto-Light", size: 18) ?? UIFont.systemFont(ofSize: 18)])
         let leftView = UIView(frame: CGRect(x: 0.0, y: 0.0, width: 15.0, height: 0.0))
         durationTextField.leftView = leftView
         durationTextField.leftViewMode = .always
         
         NSLayoutConstraint.activate([
-            durationTextField.leadingAnchor.constraint(equalTo: nameTextField.leadingAnchor),
+            durationTextField.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 20),
             durationTextField.topAnchor.constraint(equalTo: nameTextField.bottomAnchor, constant: 15),
-            durationTextField.widthAnchor.constraint(equalToConstant: frame.width * 0.7),
+            trailingAnchor.constraint(equalTo: durationTextField.trailingAnchor, constant: 20),
             durationTextField.heightAnchor.constraint(equalToConstant: 60)
         ])
     }
@@ -121,19 +123,16 @@ class MainView: UIView {
         addSubview(addButton)
         addButton.translatesAutoresizingMaskIntoConstraints = false
         addButton.backgroundColor = .orange
-        addButton.setTitleColor(.darkGray, for: .normal)
-        //addButton.setTitle("Add Timer", for: .normal)
+        addButton.setTitleColor(.white, for: .normal)
         addButton.titleLabel?.font = UIFont(name: "Roboto-Bold", size: 20)
         addButton.layer.cornerRadius = 15
         
         NSLayoutConstraint.activate([
-            addButton.topAnchor.constraint(equalTo: durationTextField.bottomAnchor, constant: 27),
-            addButton.centerXAnchor.constraint(equalTo: centerXAnchor),
-            addButton.widthAnchor.constraint(equalToConstant: frame.width * 0.9),
+            addButton.topAnchor.constraint(equalTo: durationTextField.bottomAnchor, constant: 25),
+            addButton.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 8),
+            trailingAnchor.constraint(equalTo: addButton.trailingAnchor,constant: 8),
             addButton.heightAnchor.constraint(equalToConstant: 60)
         ])
-        
-        //addButton.addTarget(self, action: #selector(RootViewController.buttonAction), for: .touchUpInside)
     }
     
     private func setupTableView() {
@@ -144,8 +143,9 @@ class MainView: UIView {
         
         NSLayoutConstraint.activate([
             tableView.topAnchor.constraint(equalTo: addButton.bottomAnchor, constant: 20),
-            tableView.widthAnchor.constraint(equalToConstant: frame.width),
-            safeAreaLayoutGuide.bottomAnchor.constraint(equalTo: tableView.bottomAnchor)
+            tableView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 0),
+            trailingAnchor.constraint(equalTo: tableView.trailingAnchor, constant: 0),
+            tableView.bottomAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor)
         ])
     }
   
@@ -158,4 +158,12 @@ class MainView: UIView {
         setupAddButton()
         setupTableView()
     }
+
 }
+
+extension UIColor {
+    static var mainPurple = UIColor(red: 1.0, green: 0.5, blue: 0.0, alpha: 0.7).cgColor
+    static var mainOrange = UIColor(red: 255/255, green: 133/255, blue: 1.0, alpha: 100/255).cgColor
+    static var borderColor = UIColor(red: 1.0, green: 0.52, blue: 0.9, alpha: 0.35).cgColor
+}
+

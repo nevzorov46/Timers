@@ -16,7 +16,7 @@ class TimerTableViewCell: UITableViewCell {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         addSubview(timerName)
         addSubview(timeDuration)
-        setupCell()
+        setupCells()
     }
     
     required init?(coder: NSCoder) {
@@ -25,31 +25,29 @@ class TimerTableViewCell: UITableViewCell {
     
     private func setupTimerName() {
         timerName.translatesAutoresizingMaskIntoConstraints = false
-        timerName.font = UIFont(name: "Roboto-Bold", size: 30)
+        timerName.font = UIFont(name: "Roboto-Regular", size: 22)
         timerName.textColor = .white
         
         NSLayoutConstraint.activate([
-            timerName.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 10),
+            timerName.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 20),
             timerName.centerYAnchor.constraint(equalTo: centerYAnchor)
         ])
     }
     
     private func setupTimeDuration() {
         timeDuration.translatesAutoresizingMaskIntoConstraints = false
-        timeDuration.font = UIFont(name: "Roboto-Bold", size: 30)
+        timeDuration.font = UIFont(name: "Roboto-Regular", size: 22)
         timeDuration.textColor = .white
         
         NSLayoutConstraint.activate([
-            trailingAnchor.constraint(equalTo: timeDuration.trailingAnchor, constant: 10),
+            trailingAnchor.constraint(equalTo: timeDuration.trailingAnchor, constant: 20),
             timeDuration.centerYAnchor.constraint(equalTo: centerYAnchor)
         ])
-        
     }
     
-    private func setupCell() {
+    private func setupCells() {
         setupTimerName()
         setupTimeDuration()
-        
     }
     
 }
