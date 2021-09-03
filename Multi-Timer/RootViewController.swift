@@ -10,7 +10,7 @@ import UIKit
 class RootViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
     let mainView = MainView()
-    
+    // let scrollView = SrollView()
     var myTimers: [MyTimer] = []
     var updateTimer = Timer()
     var durationTextField: UITextField {
@@ -84,19 +84,9 @@ class RootViewController: UIViewController, UITableViewDelegate, UITableViewData
         view = mainView
     }
     
-    private func addGradient() {
-        let layer = CAGradientLayer()
-        layer.frame = self.view.bounds
-        let colorA = UIColor.mainPurple
-        let colorB = UIColor.mainOrange
-        layer.colors = [colorA, colorB]
-        layer.startPoint = CGPoint(x: 1.0, y: 0.0)
-        layer.endPoint = CGPoint(x: 1.0, y: 1.0)
-        self.view.layer.insertSublayer(layer, at: 0)
-    }
-    
     override func viewWillAppear(_ animated: Bool) {
-        self.addGradient()
+        mainView.gradient.frame = self.view.bounds
+        self.view.layer.insertSublayer(mainView.gradient, at: 0)
     }
 
 }
