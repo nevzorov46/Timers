@@ -9,21 +9,51 @@
 /* Begin PBXBuildFile section */
 		F6D5531826E0EBDD00065315 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6D5531726E0EBDD00065315 /* AppDelegate.swift */; };
 		F6D5531A26E0EBDD00065315 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6D5531926E0EBDD00065315 /* SceneDelegate.swift */; };
-		F6D5531C26E0EBDD00065315 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6D5531B26E0EBDD00065315 /* ViewController.swift */; };
-		F6D5531F26E0EBDD00065315 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F6D5531D26E0EBDD00065315 /* Main.storyboard */; };
 		F6D5532126E0EBE600065315 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F6D5532026E0EBE600065315 /* Assets.xcassets */; };
 		F6D5532426E0EBE600065315 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F6D5532226E0EBE600065315 /* LaunchScreen.storyboard */; };
+		F6D5532C26E17AAA00065315 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6D5532B26E17AAA00065315 /* RootViewController.swift */; };
+		F6D5533B26E1BD7D00065315 /* Roboto-MediumItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F6D5532E26E1BD7C00065315 /* Roboto-MediumItalic.ttf */; };
+		F6D5533C26E1BD7D00065315 /* Roboto-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F6D5532F26E1BD7C00065315 /* Roboto-Light.ttf */; };
+		F6D5533D26E1BD7D00065315 /* LICENSE.txt in Resources */ = {isa = PBXBuildFile; fileRef = F6D5533026E1BD7C00065315 /* LICENSE.txt */; };
+		F6D5533E26E1BD7D00065315 /* Roboto-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F6D5533126E1BD7C00065315 /* Roboto-Medium.ttf */; };
+		F6D5533F26E1BD7D00065315 /* Roboto-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F6D5533226E1BD7C00065315 /* Roboto-BoldItalic.ttf */; };
+		F6D5534026E1BD7D00065315 /* Roboto-ThinItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F6D5533326E1BD7C00065315 /* Roboto-ThinItalic.ttf */; };
+		F6D5534126E1BD7D00065315 /* Roboto-BlackItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F6D5533426E1BD7C00065315 /* Roboto-BlackItalic.ttf */; };
+		F6D5534226E1BD7D00065315 /* Roboto-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F6D5533526E1BD7C00065315 /* Roboto-Regular.ttf */; };
+		F6D5534326E1BD7D00065315 /* Roboto-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F6D5533626E1BD7C00065315 /* Roboto-Black.ttf */; };
+		F6D5534426E1BD7D00065315 /* Roboto-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F6D5533726E1BD7D00065315 /* Roboto-Italic.ttf */; };
+		F6D5534526E1BD7D00065315 /* Roboto-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F6D5533826E1BD7D00065315 /* Roboto-Thin.ttf */; };
+		F6D5534626E1BD7D00065315 /* Roboto-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F6D5533926E1BD7D00065315 /* Roboto-Bold.ttf */; };
+		F6D5534726E1BD7D00065315 /* Roboto-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F6D5533A26E1BD7D00065315 /* Roboto-LightItalic.ttf */; };
+		F6D5534926E1ED0C00065315 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6D5534826E1ED0C00065315 /* MainView.swift */; };
+		F6D5534B26E1F82700065315 /* MyTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6D5534A26E1F82700065315 /* MyTimer.swift */; };
+		F6D5534D26E2102200065315 /* TimerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6D5534C26E2102200065315 /* TimerTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		F6D5531426E0EBDD00065315 /* Multi-Timer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Multi-Timer.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F6D5531726E0EBDD00065315 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F6D5531926E0EBDD00065315 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		F6D5531B26E0EBDD00065315 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		F6D5531E26E0EBDD00065315 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F6D5532026E0EBE600065315 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F6D5532326E0EBE600065315 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F6D5532526E0EBE600065315 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F6D5532B26E17AAA00065315 /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
+		F6D5532E26E1BD7C00065315 /* Roboto-MediumItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-MediumItalic.ttf"; sourceTree = "<group>"; };
+		F6D5532F26E1BD7C00065315 /* Roboto-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Light.ttf"; sourceTree = "<group>"; };
+		F6D5533026E1BD7C00065315 /* LICENSE.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE.txt; sourceTree = "<group>"; };
+		F6D5533126E1BD7C00065315 /* Roboto-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Medium.ttf"; sourceTree = "<group>"; };
+		F6D5533226E1BD7C00065315 /* Roboto-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-BoldItalic.ttf"; sourceTree = "<group>"; };
+		F6D5533326E1BD7C00065315 /* Roboto-ThinItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-ThinItalic.ttf"; sourceTree = "<group>"; };
+		F6D5533426E1BD7C00065315 /* Roboto-BlackItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-BlackItalic.ttf"; sourceTree = "<group>"; };
+		F6D5533526E1BD7C00065315 /* Roboto-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Regular.ttf"; sourceTree = "<group>"; };
+		F6D5533626E1BD7C00065315 /* Roboto-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Black.ttf"; sourceTree = "<group>"; };
+		F6D5533726E1BD7D00065315 /* Roboto-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Italic.ttf"; sourceTree = "<group>"; };
+		F6D5533826E1BD7D00065315 /* Roboto-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Thin.ttf"; sourceTree = "<group>"; };
+		F6D5533926E1BD7D00065315 /* Roboto-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Bold.ttf"; sourceTree = "<group>"; };
+		F6D5533A26E1BD7D00065315 /* Roboto-LightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-LightItalic.ttf"; sourceTree = "<group>"; };
+		F6D5534826E1ED0C00065315 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		F6D5534A26E1F82700065315 /* MyTimer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTimer.swift; sourceTree = "<group>"; };
+		F6D5534C26E2102200065315 /* TimerTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +86,38 @@
 		F6D5531626E0EBDD00065315 /* Multi-Timer */ = {
 			isa = PBXGroup;
 			children = (
+				F6D5532D26E1BD6500065315 /* Fonts */,
+				F6D5534826E1ED0C00065315 /* MainView.swift */,
 				F6D5531726E0EBDD00065315 /* AppDelegate.swift */,
 				F6D5531926E0EBDD00065315 /* SceneDelegate.swift */,
-				F6D5531B26E0EBDD00065315 /* ViewController.swift */,
-				F6D5531D26E0EBDD00065315 /* Main.storyboard */,
 				F6D5532026E0EBE600065315 /* Assets.xcassets */,
 				F6D5532226E0EBE600065315 /* LaunchScreen.storyboard */,
 				F6D5532526E0EBE600065315 /* Info.plist */,
+				F6D5532B26E17AAA00065315 /* RootViewController.swift */,
+				F6D5534A26E1F82700065315 /* MyTimer.swift */,
+				F6D5534C26E2102200065315 /* TimerTableViewCell.swift */,
 			);
 			path = "Multi-Timer";
+			sourceTree = "<group>";
+		};
+		F6D5532D26E1BD6500065315 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				F6D5533026E1BD7C00065315 /* LICENSE.txt */,
+				F6D5533626E1BD7C00065315 /* Roboto-Black.ttf */,
+				F6D5533426E1BD7C00065315 /* Roboto-BlackItalic.ttf */,
+				F6D5533926E1BD7D00065315 /* Roboto-Bold.ttf */,
+				F6D5533226E1BD7C00065315 /* Roboto-BoldItalic.ttf */,
+				F6D5533726E1BD7D00065315 /* Roboto-Italic.ttf */,
+				F6D5532F26E1BD7C00065315 /* Roboto-Light.ttf */,
+				F6D5533A26E1BD7D00065315 /* Roboto-LightItalic.ttf */,
+				F6D5533126E1BD7C00065315 /* Roboto-Medium.ttf */,
+				F6D5532E26E1BD7C00065315 /* Roboto-MediumItalic.ttf */,
+				F6D5533526E1BD7C00065315 /* Roboto-Regular.ttf */,
+				F6D5533826E1BD7D00065315 /* Roboto-Thin.ttf */,
+				F6D5533326E1BD7C00065315 /* Roboto-ThinItalic.ttf */,
+			);
+			path = Fonts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -124,9 +177,21 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F6D5534626E1BD7D00065315 /* Roboto-Bold.ttf in Resources */,
 				F6D5532426E0EBE600065315 /* LaunchScreen.storyboard in Resources */,
+				F6D5534726E1BD7D00065315 /* Roboto-LightItalic.ttf in Resources */,
+				F6D5534426E1BD7D00065315 /* Roboto-Italic.ttf in Resources */,
+				F6D5533B26E1BD7D00065315 /* Roboto-MediumItalic.ttf in Resources */,
+				F6D5534226E1BD7D00065315 /* Roboto-Regular.ttf in Resources */,
+				F6D5533E26E1BD7D00065315 /* Roboto-Medium.ttf in Resources */,
+				F6D5533C26E1BD7D00065315 /* Roboto-Light.ttf in Resources */,
+				F6D5534326E1BD7D00065315 /* Roboto-Black.ttf in Resources */,
+				F6D5534126E1BD7D00065315 /* Roboto-BlackItalic.ttf in Resources */,
+				F6D5534026E1BD7D00065315 /* Roboto-ThinItalic.ttf in Resources */,
+				F6D5533D26E1BD7D00065315 /* LICENSE.txt in Resources */,
+				F6D5533F26E1BD7D00065315 /* Roboto-BoldItalic.ttf in Resources */,
+				F6D5534526E1BD7D00065315 /* Roboto-Thin.ttf in Resources */,
 				F6D5532126E0EBE600065315 /* Assets.xcassets in Resources */,
-				F6D5531F26E0EBDD00065315 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -137,23 +202,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F6D5531C26E0EBDD00065315 /* ViewController.swift in Sources */,
 				F6D5531826E0EBDD00065315 /* AppDelegate.swift in Sources */,
+				F6D5534926E1ED0C00065315 /* MainView.swift in Sources */,
+				F6D5532C26E17AAA00065315 /* RootViewController.swift in Sources */,
 				F6D5531A26E0EBDD00065315 /* SceneDelegate.swift in Sources */,
+				F6D5534B26E1F82700065315 /* MyTimer.swift in Sources */,
+				F6D5534D26E2102200065315 /* TimerTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		F6D5531D26E0EBDD00065315 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				F6D5531E26E0EBDD00065315 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		F6D5532226E0EBE600065315 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -296,7 +356,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "ikaramazov.Multi-Timer";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -315,7 +375,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "ikaramazov.Multi-Timer";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
