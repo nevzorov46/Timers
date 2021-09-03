@@ -11,16 +11,31 @@ class RootViewController: UIViewController, UITableViewDelegate, UITableViewData
 
     var myTimers: [MyTimer] = []
     var updateTimer  = Timer()
-
-    var mainView = MainView()
+    let mainView = MainView()
+    
+    /*
+    var durationTextField: UITextField {
+        return mainView.durationTextField
+    }
+    
+    var nameTextField: UITextField {
+        return mainView.nameTextField
+    }
+ 
+    */
+    
+    
+   // var mainView = MainView()
     let projectTitle = UILabel()
     let addingTimerLabel = UILabel()
     let line = UIView()
     let nameTextField = UITextField()
     let durationTextField = UITextField()
     let addButton = UIButton()
+    
     let tableView = UITableView()
-
+   
+    
     private func removeTimer() {
         let now = Date()
         for (index,timer) in myTimers.enumerated() {
@@ -42,6 +57,7 @@ class RootViewController: UIViewController, UITableViewDelegate, UITableViewData
             self.tableView.reloadData()
         }
     }
+    
     
     private func setupProjectTitle() {
         view.addSubview(projectTitle)
@@ -135,12 +151,11 @@ class RootViewController: UIViewController, UITableViewDelegate, UITableViewData
     private func setupAddButton() {
         view.addSubview(addButton)
         addButton.translatesAutoresizingMaskIntoConstraints = false
+        addButton.backgroundColor = .orange
         addButton.setTitleColor(.darkGray, for: .normal)
         addButton.setTitle("Add Timer", for: .normal)
-        addButton.titleLabel?.font = UIFont(name: "Roboto-Regular", size: 20)
-        
+        addButton.titleLabel?.font = UIFont(name: "Roboto-Bold", size: 20)
         addButton.layer.cornerRadius = 15
-        addButton.backgroundColor = .orange
         
         NSLayoutConstraint.activate([
             addButton.topAnchor.constraint(equalTo: durationTextField.bottomAnchor, constant: 27),
@@ -156,6 +171,7 @@ class RootViewController: UIViewController, UITableViewDelegate, UITableViewData
         view.addSubview(tableView)
         tableView.translatesAutoresizingMaskIntoConstraints = false
         tableView.backgroundColor = .clear
+        tableView.rowHeight = 60
         
         NSLayoutConstraint.activate([
             tableView.topAnchor.constraint(equalTo: addButton.bottomAnchor, constant: 20),
@@ -174,28 +190,23 @@ class RootViewController: UIViewController, UITableViewDelegate, UITableViewData
         setupTableView()
     }
     
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return myTimers.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        //let cell = tableView.dequeueReusableCell(withIdentifier: "timers", for: indexPath)
-        let cell = UITableViewCell(style: .value2, reuseIdentifier: "timers")
+        let cell: TimerTableViewCell = tableView.dequeueReusableCell(withIdentifier: "timers") as! TimerTableViewCell
         let timer = myTimers[indexPath.row]
         cell.backgroundColor = .clear
-        cell.textLabel?.text = timer.name
-        cell.textLabel?.textColor = .white
-        cell.textLabel?.font = UIFont(name: "Roboto-Bold", size: 20)
+        cell.timerName.text = timer.name
         let now = Date()
         let allSeconds = Calendar.current.dateComponents([.second], from: now, to: timer.finishDate()).second ?? 0
         let seconds = allSeconds % 60
         let minutes = allSeconds / 60
         let formattedDuration = String(format: "%02i:%02i", minutes, seconds)
-        cell.detailTextLabel?.text = formattedDuration
-        cell.detailTextLabel?.textColor = .white
-        cell.detailTextLabel?.font = UIFont(name: "Roboto-Bold", size: 20)
-        cell.detailTextLabel?.textAlignment = .right
-        
+        cell.timeDuration.text = formattedDuration
+   
         return cell
         
     }
@@ -204,10 +215,12 @@ class RootViewController: UIViewController, UITableViewDelegate, UITableViewData
         super.viewDidLoad()
         setupView()
         addGradient()
+        //mainView.addButton.setTitle("Add Timer", for: .normal)
+        //mainView.addButton.addTarget(self, action: #selector(buttonAction),  for: .touchUpInside)
         
         tableView.delegate = self
         tableView.dataSource = self
-        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "timers")
+        tableView.register(TimerTableViewCell.self, forCellReuseIdentifier: "timers")
         
         updateTimer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(updateTable), userInfo: nil, repeats: true)
     }
@@ -216,7 +229,9 @@ class RootViewController: UIViewController, UITableViewDelegate, UITableViewData
     private func addGradient() {
         let layer = CAGradientLayer()
         layer.frame = view.bounds
-        layer.colors = [UIColor.orange.cgColor, UIColor.purple.cgColor]
+        let colorB = UIColor(red: 255/255, green: 133/255, blue: 200/255, alpha: 100/255).cgColor
+        let colorA = UIColor(red: 255/255, green: 213/255, blue: 114/255, alpha: 100/255).cgColor
+        layer.colors = [colorA, colorB]
         layer.startPoint = CGPoint(x: 1.0, y: 0.0)
         layer.endPoint = CGPoint(x: 1.0, y: 1.0)
         view.layer.insertSublayer(layer, at: 0)
@@ -229,5 +244,7 @@ class RootViewController: UIViewController, UITableViewDelegate, UITableViewData
         guard let intTimer = Int(time) else { return }
         myTimers.append(MyTimer(name: timerName, secondsToFinish: intTimer))
     }
+    
+  
 
 }
